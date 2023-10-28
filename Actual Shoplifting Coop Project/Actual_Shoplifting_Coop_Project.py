@@ -26,5 +26,13 @@ if customer == 1:
             time.sleep(1)
             print("your score is ",score)
         if choice == 2:
+            score -=5
             print("you and your colleague manage to apprehend the shoplifter and call the police")
+            time.sleep(1)
+            print("however this was a dangerous move and could have risked injury")
+            time.sleep(1)
+            print("remember that intervening can lead to injury and you should intervene as non-violently as possible to avoid this")
+            time.sleep(1)
+            print("your score is ",score)
+            
 # this is where you add next customer path with if statement 
