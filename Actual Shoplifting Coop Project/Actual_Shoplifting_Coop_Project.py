@@ -1,6 +1,7 @@
 import random
 import time
 score = 0
+customer = random.randint(1,3)
 end = False
 print("You are an employee at Co-op. You see a customer wandering around the store picking up items for a long time with a big backpack. ")
 time.sleep(1)
@@ -144,7 +145,7 @@ if customer == 1:
            end= True       
             
 # 2nd customer path starts here 
-if customer == 2:
+elif customer == 2:
     if choice == 1:
         score == 5
         print("The customer gets offended")
@@ -201,7 +202,7 @@ if customer == 2:
         print("your score is ",score)
         end = True
 #3rd customer path starts here
-if customer == 3:
+elif customer == 3:
     if choice == 1:
         score-=10
         print("The customer is now upset")
