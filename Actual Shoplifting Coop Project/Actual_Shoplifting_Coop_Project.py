@@ -232,7 +232,7 @@ while score < 10:
              print("the customer leaves happy and gets what they want")
              end= True
 #this is where the customer paths end so that the final finishing statement can be printed
-    if end == True & score <10 :
+    if end == True and score <10 :
         print("remember there are many different reasons why a customer may act suspicious.")
         time.sleep(1)
         print("the right course of action always depends on the circumstances. ")
@@ -240,7 +240,7 @@ while score < 10:
         print("if you try this simulation again you may find that your inital right actions may now be wrong for the situation.")
         time.sleep(1)
         print("however the basic principles always apply of trying to keep yourself and other people safe first. ")
-    elif end==True& score>=10:
+    elif end==True and score>=10:
             print("your score is good as you handled the customer well. Well done!")
             time.sleep(1)
             print("however always remember that there are many different reasons why a customer may act suspicious.")
