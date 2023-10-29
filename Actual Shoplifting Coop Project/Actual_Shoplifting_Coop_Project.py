@@ -1,34 +1,38 @@
 import random
 import time
-score = 0
-customer = random.randint(1,3)
-end = False
-print("You are an employee at Co-op. You see a customer wandering around the store picking up items for a long time with a big backpack. ")
-time.sleep(1)
-print("you can:")
-time.sleep(1)
-print("1) Go up and confront them")
-time.sleep(1)
-print("2) Watch them")
-time.sleep(1)
-print("3) ask them if they need any help")
-time.sleep(1)
-choice = int(input("choose the number that corresponds with your choice: "))
-#customer types are as follows 1 is violent shoplifter 2 is normal person 3 is confused person
-if customer == 1:
-    if choice == 1:
-        score-=10
-        print("The customer starts to become violent")
-        time.sleep(1)
-        print("You can:")
-        time.sleep(1)
-        print("1) intervene yourself")
-        time.sleep(1)
-        print("2) ask a colleague to intervene and call the police")
-        time.sleep(1)
-        print("3) attempt to call the police yourself")
-        time.sleep(1)
-        choice = int(input("choose the number that corresponds with your choice: "))
+score=0
+while score < 10:
+    score=0
+    customer = random.randint(1,3)
+    end = False
+    print("this program will repeat until you pass (get a score of 10 or more) ")
+    time.sleep(1)
+    print("You are an employee at Co-op. You see a customer wandering around the store picking up items for a long time with a big backpack. ")
+    time.sleep(1)
+    print("you can:")
+    time.sleep(1)
+    print("1) Go up and confront them")
+    time.sleep(1)
+    print("2) Watch them")
+    time.sleep(1)
+    print("3) ask them if they need any help")
+    time.sleep(1)
+    choice = int(input("choose the number that corresponds with your choice: "))
+    #customer types are as follows 1 is violent shoplifter 2 is normal person 3 is confused person
+    if customer == 1:
+        if choice == 1:
+            score-=10
+            print("The customer starts to become violent")
+            time.sleep(1)
+            print("You can:")
+            time.sleep(1)
+            print("1) intervene yourself")
+            time.sleep(1)
+            print("2) ask a colleague to intervene and call the police")
+            time.sleep(1)
+            print("3) attempt to call the police yourself")
+            time.sleep(1)
+            choice = int(input("choose the number that corresponds with your choice: "))
         if choice == 1:
             score-=10
             print("you obtain a serious injury.")
@@ -145,18 +149,18 @@ if customer == 1:
            end= True       
             
 # 2nd customer path starts here 
-elif customer == 2:
-    if choice == 1:
-        score == 5
-        print("The customer gets offended")
-        time.sleep(1)
-        print("As a result:")
-        time.sleep
-        print("1) Briefly explain concerns/suspicions to customer")
-        time.sleep(1)
-        print("2)Apologise to customer")
-        time.sleep(1)
-        choice2 = int(input("choose the number that corresponds with your choice: "))
+    elif customer == 2:
+        if choice == 1:
+            score == 5
+            print("The customer gets offended")
+            time.sleep(1)
+            print("As a result:")
+            time.sleep
+            print("1) Briefly explain concerns/suspicions to customer")
+            time.sleep(1)
+            print("2)Apologise to customer")
+            time.sleep(1)
+            choice2 = int(input("choose the number that corresponds with your choice: "))
         if choice2 == 1:
             score += 5
             print(" Customer gains an understanding ")
@@ -202,18 +206,7 @@ elif customer == 2:
         print("your score is ",score)
         end = True
 #3rd customer path starts here
-elif customer == 3:
-    if choice == 1:
-        score-=10
-        print("The customer is now upset")
-        time.sleep(1)
-        print("You can:")
-        time.sleep(1)
-        print("1)argue with the customer")
-        time.sleep(1)
-        print("2) apologise and help them with what they are confused about")
-        time.sleep(1)
-        choice = int(input("choose the number that corresponds with your choice: "))
+    elif customer == 3:
         # if customer picks choice 1
         if choice == 1:
             score-=10
@@ -227,47 +220,34 @@ elif customer == 3:
             end = True
         # if cutomer picks choice 2
         elif choice == 2:
-            score +=10
-            print("the customer is happy with your service")
+            score +=5
+            print("The customer struggles for a while and attempts to find that they want.")
             time.sleep(1)
-            print("and leave a good review")
-            time.sleep(1)
-            print("remember that it is okay to make a mistake but make sure you own up to them and try to rectify the situation which you did")
-            time.sleep(1)
-            print("well done! You pick the best option.")
-            time.sleep(1)
-            print("your score is ",score)
+            print("But fails and leave the shop unsatisfied")
             end= True
-
-    elif choice == 2:
-        score +=5
-        print("The customer struggles for a while and attempts to find that they want.")
-        time.sleep(1)
-        print("But fails and leave the shop unsatisfied")
-        end= True
-    elif choice == 3:
-        score +=10
-        print("This is the best option. Well done!")
-        time.sleep(1)
-        print("The customer leaves happy and gets what they want")
-        end= True
+        elif choice == 3:
+             score +=10
+             print("This is the best option. Well done!")
+             time.sleep(1)
+             print("The customer leaves happy and gets what they want")
+             end= True
 #this is where the customer paths end so that the final finishing statement can be printed
-if end == True & score <10 :
- print("remember there are many different reasons why a customer may act suspicious.")
- time.sleep(1)
- print("the right course of action always depends on the circumstances. ")
- time.sleep(1)
- print("if you try this simulation again you may find that your inital right actions may now be wrong for the situation.")
- time.sleep(1)
- print("however the basic principles always apply of trying to keep yourself and other people safe first. ")
-elif end==True& score>=10:
-   print("your score is good as you handled the customer well. Well done!")
-   time.sleep(1)
-   print("however always remember that there are many different reasons why a customer may act suspicious.")
-   time.sleep(1)
-   print("the right course of action always depends on the circumstances. ")
-   time.sleep(1)
-   print("if you try this simulation again you may find that your inital right actions may now be wrong for the situation.")
-   time.sleep(1)
-   print("however the basic principles always apply of trying to keep yourself and other people safe first. ")
+    if end == True & score <10 :
+        print("remember there are many different reasons why a customer may act suspicious.")
+        time.sleep(1)
+        print("the right course of action always depends on the circumstances. ")
+        time.sleep(1)
+        print("if you try this simulation again you may find that your inital right actions may now be wrong for the situation.")
+        time.sleep(1)
+        print("however the basic principles always apply of trying to keep yourself and other people safe first. ")
+    elif end==True& score>=10:
+            print("your score is good as you handled the customer well. Well done!")
+            time.sleep(1)
+            print("however always remember that there are many different reasons why a customer may act suspicious.")
+            time.sleep(1)
+            print("the right course of action always depends on the circumstances. ")
+            time.sleep(1)
+            print("if you try this simulation again you may find that your inital right actions may now be wrong for the situation.")
+            time.sleep(1)
+            print("however the basic principles always apply of trying to keep yourself and other people safe first. ")
     
