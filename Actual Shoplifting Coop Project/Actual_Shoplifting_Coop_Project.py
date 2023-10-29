@@ -152,9 +152,57 @@ if customer == 2:
         score == 5
         print("The customer gets offended")
         time.sleep(1)
-        print("As a result: 1) Briefly explain concerns/suspicions to customer 2)Apologise to customer")
+        print("As a result:")
+        time.sleep
+        print("1) Briefly explain concerns/suspicions to customer")
+        time.sleep(1)
+        print("2)Apologise to customer")
         time.sleep(1)
         choice2 = int(input("choose the number that corresponds with your choice: "))
+        if choice2 == 1:
+            score += 5
+            print(" Customer gains an understanding ")
+            time.sleep(1)
+            print("You have reassured the customer")
+            time.sleep(1)
+            print("This was a good choice as they'll continue to buy from your shop!")
+            time.sleep(1)
+            print("your score is ",score)
+            end = True
+        elif choice2 == 2:
+            print(" Customer appreciates your apology")
+            time.sleep(1)
+            print("You have calmed the customer down")
+            time.sleep(1)
+            print("this was a good choice because the customer will now happily buy what they need ")
+            time.sleep(1)
+            score += 5
+            print("your score is ",score)
+            end = True
+               
+     
+    elif choice == 2:
+         print(" Customer may start to feel uncomfortable")
+         time.sleep(1)
+         print("As a result, customer may leave the shop and not buy anything at all")
+         time.sleep(1)
+         print("Customer may make a complaint")
+         time.sleep(1)
+         print("This wasnt the best choice as it jeoprodises yours and the shop's reputation")
+         score +=5
+         print("your score is ",score)
+         end= True
+         
+
+    elif choice == 3:
+        print("By asking if the customer needs assistance, they'll appreciate  the good customer service and leave a good review of the shop!")
+        time.sleep(1)
+        print("Additionally, they may find more product to buy with your assistance")
+        time.sleep(1)
+        print("You've made the best choice!")
+        score += 10
+        print("your score is ",score)
+        end = True
 #this is where the customer paths end so that the final finishing statement can be printed
 if end == True:
  print("remember there are many different reasons why a customer may act suspicious.")
