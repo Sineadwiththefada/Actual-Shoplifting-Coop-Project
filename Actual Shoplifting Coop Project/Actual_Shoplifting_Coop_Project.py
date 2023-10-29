@@ -202,6 +202,49 @@ if customer == 2:
         print("your score is ",score)
         end = True
 #3rd customer path starts here
+if customer == 3:
+    if choice == 1:
+        score-=10
+        print("The customer is now upset")
+        time.sleep(1)
+        print("You can:")
+        time.sleep(1)
+        print("1)argue with the customer")
+        time.sleep(1)
+        print("2) apologise and help them with what they are confused about")
+        time.sleep(1)
+        choice = int(input("choose the number that corresponds with your choice: "))
+        # if customer picks choice 1
+        if choice == 1:
+            score-=10
+            print("customer gets angry and leaves a bad review ")
+            time.sleep(1)
+            print("you upset an innocent cutomer that needed your help")
+            time.sleep(1)
+            print("instead of this you can ask if they need any help calmly")
+            time.sleep(1)
+            print("your score is ",score)
+            end = True
+        # if cutomer picks choice 2
+        elif choice == 2:
+            score +=10
+            print("the customer is happy with your service")
+            time.sleep(1)
+            print("and leave a good review")
+            time.sleep(1)
+            print("remember that it is okay to make a mistake but make sure you own up to them and try to rectify the situation which you did")
+            time.sleep(1)
+            print("well done! You pick the best option.")
+            time.sleep(1)
+            print("your score is ",score)
+            end= True
+
+    elif choice == 2:
+        score +=5
+        print("The customer struggles for a while and attempts to find that they want.")
+        time.sleep(1)
+        print("But fails and leave the shop unsatisfied")
+        end= True
 #this is where the customer paths end so that the final finishing statement can be printed
 if end == True:
  print("remember there are many different reasons why a customer may act suspicious.")
@@ -211,5 +254,3 @@ if end == True:
  print("if you try this simulation again you may find that your inital right actions may now be wrong for the situation.")
  time.sleep(1)
  print("however the basic principles always apply of trying to keep yourself and other people safe first. ")
- 
-
