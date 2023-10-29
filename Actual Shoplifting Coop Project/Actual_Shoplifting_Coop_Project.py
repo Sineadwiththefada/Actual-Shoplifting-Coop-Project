@@ -118,10 +118,17 @@ if customer == 1:
            print("this is the best choice in this scenario as you have kept yourself safe and prevented shoplifting from occuring.  ")
            time.sleep(1)
            print("your score is ",score)
-           end= True
-        
+           end= True       
             
 # this is where you add next customer path with if statement 
+if customer == 2:
+    if choice == 1:
+        score == 5
+        print("The customer gets offended")
+        time.sleep(1)
+        print("As a result: 1) Briefly explain concerns/suspicions to customer 2)Apologise to customer")
+        time.sleep(1)
+        choice2 = int(input("choose the number that corresponds with your choice: "))
 #this is where the customer paths end so that the final finishing statement can be printed
 if end == True:
  print("remember there are many different reasons why a customer may act suspicious.")
