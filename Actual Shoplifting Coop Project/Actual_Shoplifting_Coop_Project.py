@@ -144,7 +144,7 @@ if customer == 1:
            print("your score is ",score)
            end= True       
             
-# this is where you add next customer path with if statement 
+# 2nd customer path starts here 
 if customer == 2:
     if choice == 1:
         score == 5
@@ -201,6 +201,7 @@ if customer == 2:
         score += 10
         print("your score is ",score)
         end = True
+#3rd customer path starts here
 #this is where the customer paths end so that the final finishing statement can be printed
 if end == True:
  print("remember there are many different reasons why a customer may act suspicious.")
