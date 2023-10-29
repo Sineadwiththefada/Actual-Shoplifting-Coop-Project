@@ -1,7 +1,5 @@
 import random
 import time
-from tkinter import *
-from tkinter import ttk,Text
 customer = random.randint(1,3)
 score = 0
 end = False
