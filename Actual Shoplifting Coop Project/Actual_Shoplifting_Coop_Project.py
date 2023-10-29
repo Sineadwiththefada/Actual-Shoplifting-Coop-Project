@@ -7,13 +7,13 @@ while score < 10:
     end = False
     print("this program will repeat until you pass (get a score of 10 or more) ")
     time.sleep(1)
-    print("You are an employee at Co-op. You see a customer wandering around the store picking up items for a long time with a big backpack. ")
+    print("you are an employee at Co-op. you see a customer wandering around the store picking up items for a long time with a big backpack. ")
     time.sleep(1)
     print("you can:")
     time.sleep(1)
-    print("1) Go up and confront them")
+    print("1) go up and confront them")
     time.sleep(1)
-    print("2) Watch them")
+    print("2) watch them")
     time.sleep(1)
     print("3) ask them if they need any help")
     time.sleep(1)
@@ -22,9 +22,9 @@ while score < 10:
     if customer == 1:
         if choice == 1:
             score-=10
-            print("The customer starts to become violent")
+            print("the customer starts to become violent")
             time.sleep(1)
-            print("You can:")
+            print("you can:")
             time.sleep(1)
             print("1) intervene yourself")
             time.sleep(1)
@@ -172,9 +172,9 @@ while score < 10:
             print("your score is ",score)
             end = True
         elif choice2 == 2:
-            print(" Customer appreciates your apology")
+            print(" the customer appreciates your apology")
             time.sleep(1)
-            print("You have calmed the customer down")
+            print("you have calmed the customer down")
             time.sleep(1)
             print("this was a good choice because the customer will now happily buy what they need ")
             time.sleep(1)
@@ -184,24 +184,24 @@ while score < 10:
                
      
     elif choice == 2:
-         print(" Customer may start to feel uncomfortable")
+         print(" the customer may start to feel uncomfortable")
          time.sleep(1)
-         print("As a result, customer may leave the shop and not buy anything at all")
+         print("as a result, customer may leave the shop and not buy anything at all")
          time.sleep(1)
-         print("Customer may make a complaint")
+         print("the customer may make a complaint")
          time.sleep(1)
-         print("This wasnt the best choice as it jeoprodises yours and the shop's reputation")
+         print("this wasnt the best choice as it jeopardises yours and the shop's reputation")
          score +=5
          print("your score is ",score)
          end= True
          
 
     elif choice == 3:
-        print("By asking if the customer needs assistance, they'll appreciate  the good customer service and leave a good review of the shop!")
+        print("by asking if the customer needs assistance, they'll appreciate  the good customer service and leave a good review of the shop!")
         time.sleep(1)
-        print("Additionally, they may find more product to buy with your assistance")
+        print("additionally, they may find more product to buy with your assistance")
         time.sleep(1)
-        print("You've made the best choice!")
+        print("you've made the best choice!")
         score += 10
         print("your score is ",score)
         end = True
@@ -210,9 +210,9 @@ while score < 10:
         # if customer picks choice 1
         if choice == 1:
             score-=10
-            print("customer gets angry and leaves a bad review ")
+            print("the customer gets angry and leaves a bad review ")
             time.sleep(1)
-            print("you upset an innocent cutomer that needed your help")
+            print("you upset an innocent customer that needed your help")
             time.sleep(1)
             print("instead of this you can ask if they need any help calmly")
             time.sleep(1)
@@ -221,15 +221,15 @@ while score < 10:
         # if cutomer picks choice 2
         elif choice == 2:
             score +=5
-            print("The customer struggles for a while and attempts to find that they want.")
+            print("the customer struggles for a while and attempts to find that they want.")
             time.sleep(1)
-            print("But fails and leave the shop unsatisfied")
+            print("but fails and leave the shop unsatisfied")
             end= True
         elif choice == 3:
              score +=10
-             print("This is the best option. Well done!")
+             print("this is the best option. Well done!")
              time.sleep(1)
-             print("The customer leaves happy and gets what they want")
+             print("the customer leaves happy and gets what they want")
              end= True
 #this is where the customer paths end so that the final finishing statement can be printed
     if end == True & score <10 :
