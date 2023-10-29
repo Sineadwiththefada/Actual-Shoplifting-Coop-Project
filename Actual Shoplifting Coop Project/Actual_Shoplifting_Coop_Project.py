@@ -113,7 +113,7 @@ if customer == 1:
                end= True
         elif choice ==3 :
            score+=10
-           print("they leave the items there and leave.")
+           print("they put the items back on the shelf and leave.")
            time.sleep(1)
            print("this is the best choice in this scenario as you have kept yourself safe and prevented shoplifting from occuring.  ")
            time.sleep(1)
