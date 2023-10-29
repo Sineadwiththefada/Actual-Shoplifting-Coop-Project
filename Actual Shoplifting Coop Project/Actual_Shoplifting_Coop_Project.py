@@ -1,11 +1,19 @@
 import random
 import time
+from tkinter import *
+from tkinter import ttk,Text
 customer = random.randint(1,3)
 score = 0
 end = False
 print("You are an employee at Co-op. You see a customer wandering around the store picking up items for a long time with a big backpack. ")
 time.sleep(1)
-print("you can: 1) Go up and confront them 2) Watch them 3) ask them if they need any help")
+print("you can:")
+time.sleep(1)
+print("1) Go up and confront them")
+time.sleep(1)
+print("2) Watch them")
+time.sleep(1)
+print("3) ask them if they need any help")
 time.sleep(1)
 choice = int(input("choose the number that corresponds with your choice: "))
 #customer types are as follows 1 is violent shoplifter 2 is normal person 3 is confused person
@@ -14,7 +22,13 @@ if customer == 1:
         score-=10
         print("The customer starts to become violent")
         time.sleep(1)
-        print("You can: 1) intervene yourself 2) ask a colleague to intervene and call the police 3) attempt to call the police yourself")
+        print("You can:")
+        time.sleep(1)
+        print("1) intervene yourself")
+        time.sleep(1)
+        print("2) ask a colleague to intervene and call the police")
+        time.sleep(1)
+        print("3) attempt to call the police yourself")
         time.sleep(1)
         choice = int(input("choose the number that corresponds with your choice: "))
         if choice == 1:
@@ -53,12 +67,24 @@ if customer == 1:
         score +=5
         print("they put down the item they are holding and attempt to leave without reaching the till. they may have put items in their bag beforehand.")
         time.sleep(1)
-        print("you can 1) go up and confront them 2) ask them if they have forgotten to come to the till 3) watch them as they leave ")
+        print("you can: ")
+        time.sleep(1)
+        print("1) go up and confront them")
+        time.sleep(1)
+        print("2) ask them if they have forgotten to come to the till")
+        time.sleep(1)
+        print("3) watch them as they leave ")
         choice = int(input("choose the number that corresponds with your choice "))
         if choice == 1:
             print("the customer starts to becomes violent.")
             time.sleep(1)
-            print("You can: 1) intervene yourself 2) ask a colleague to intervene and call the police 3) attempt to call the police yourself")
+            print("You can:")
+            time.sleep(1)
+            print("1) intervene yourself")
+            time.sleep(1)
+            print("2) ask a colleague to intervene and call the police")
+            time.sleep(1)
+            print("3) attempt to call the police yourself")
             time.sleep(1)
             choice1 = int(input("choose the number that corresponds with your choice: "))
             if choice1 == 1:
@@ -138,3 +164,44 @@ if end == True:
  print("if you try this simulation again you may find that your inital right actions may now be wrong for the situation.")
  time.sleep(1)
  print("however the basic principles always apply of trying to keep yourself and other people safe first. ")
+ 
+
+#GUI CODE HERE DO NOT EDIT
+choicex =""
+def submit():
+    rootwindow.quit() 
+    choicex = str(variable.get())
+if choicex == "Go and Confront Them":
+   choice = 1
+elif choicex == "Watch Them":
+   choice= 2
+elif choicex == "Ask If They Need Help":
+   choice=3
+rootwindow = Tk()
+rootwindow.geometry("500x550")
+rootwindow.resizable(False, False)
+rootwindow.title("Text Widget Example")
+text = Text(rootwindow, height=2)
+text.pack()
+text.insert('1.0', 'What will you do? ')
+variable = StringVar(rootwindow)
+variable.set('Choose your option')
+choices = ['Go and Confront Them', 'Watch Them', 'Ask If They Need Help']
+variable = StringVar(rootwindow)
+variable.set('Choose Your Option')
+w = OptionMenu(rootwindow, variable, *choices)
+submit_button = ttk.Button(
+    rootwindow,
+    text='Submit',
+    command=lambda: submit()
+)  
+
+submit_button.pack(
+    ipadx=5,
+    ipady=5,
+    expand=False    
+)
+submit_button.place(x=200, y=135)
+w.pack(); rootwindow.mainloop()
+print(choicex)
+print(choice)
