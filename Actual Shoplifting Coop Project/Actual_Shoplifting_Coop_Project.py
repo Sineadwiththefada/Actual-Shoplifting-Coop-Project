@@ -33,16 +33,16 @@ while score < 10:
             print("3) attempt to call the police yourself")
             time.sleep(1)
             choice = int(input("choose the number that corresponds with your choice: "))
-        if choice == 1:
-            score-=10
-            print("you obtain a serious injury.")
-            time.sleep(1)
-            print("you endangered yourself by intervening without backup when you knew the person was violent.")
-            time.sleep(1)
-            print("this is a bad idea instead try to call for backup with colleagues.")
-            time.sleep(1)
-            print("your score is ",score)
-            end = True
+            if choice == 1:
+                score-=10
+                print("you obtain a serious injury.")
+                time.sleep(1)
+                print("you endangered yourself by intervening without backup when you knew the person was violent.")
+                time.sleep(1)
+                print("this is a bad idea instead try to call for backup with colleagues.")
+                time.sleep(1)
+                print("your score is ",score)
+                end = True
         elif choice == 2:
             score +=5
             print("you and your colleague manage to apprehend the shoplifter and call the police")
@@ -55,7 +55,7 @@ while score < 10:
             end= True
         elif choice == 3:
             score-=10
-            print("you obtain an injury as the shoplifter gets you off guard.")
+            print("the shoplifter catches you off guard and you obtain an injury")
             time.sleep(1)
             print("you endangered yourself by trying to get backup when you knew the person was violent.")
             time.sleep(1)
