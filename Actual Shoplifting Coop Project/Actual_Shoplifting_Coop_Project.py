@@ -1,6 +1,5 @@
 import random
 import time
-customer = random.randint(1,3)
 score = 0
 end = False
 print("You are an employee at Co-op. You see a customer wandering around the store picking up items for a long time with a big backpack. ")
@@ -244,6 +243,12 @@ if customer == 3:
         print("The customer struggles for a while and attempts to find that they want.")
         time.sleep(1)
         print("But fails and leave the shop unsatisfied")
+        end= True
+    elif choice == 3:
+        score +=10
+        print("This is the best option. Well done!")
+        time.sleep(1)
+        print("The customer leaves happy and gets what they want")
         end= True
 #this is where the customer paths end so that the final finishing statement can be printed
 if end == True:
